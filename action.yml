@@ -1,0 +1,5 @@
+name: "ashishkurmi hello-action"
+description: "ashishkurmi hello-action"
+runs:
+  using: "docker"
+  image: "docker://ghcr.io/ashishkurmi/hello-action:latest"
