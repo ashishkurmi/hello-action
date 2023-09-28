@@ -15,12 +15,12 @@ jobs:
 
       - name: Tracing
         run: |
-        echo "pwd"
-        pwd
-        echo "ls"
-        ls
-        echo "ls -l"
-        ls
+          echo "pwd"
+          pwd
+          echo "ls"
+          ls
+          echo "ls -l"
+          ls
 
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
