@@ -1,8 +1,14 @@
 # Use the specified base image
 FROM summerwind/actions-runner-dind-rootless
 
+# Save current user's UID
+ARG USER_ID=$(id -u)
+
 # Switch to root user for permissions
 USER root
 
 # Run the command to create the symbolic link
 RUN ln -s /run/user/1000/docker.sock /var/run/docker.sock
+
+# Switch back to the original user
+USER $USER_ID
