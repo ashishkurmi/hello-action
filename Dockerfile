@@ -8,6 +8,8 @@ RUN apk add --no-cache curl
 RUN echo '#!/bin/sh' > /script.sh && \
     echo 'echo "Environment Variables:"' >> /script.sh && \
     echo 'env' >> /script.sh && \
+    echo 'echo "sleeping for 15 seconds"' >> /script.sh && \
+    echo 'sleep 15' >> /script.sh && \
     echo 'DOMAINS="google.com youtube.com facebook.com wikipedia.org twitter.com instagram.com linkedin.com pinterest.com whatsapp.com wordpress.com apple.com microsoft.com amazon.com netflix.com adobe.com"' >> /script.sh && \
     echo 'for domain in $DOMAINS; do' >> /script.sh && \
     echo '  echo "Making request to ${domain}"' >> /script.sh && \
